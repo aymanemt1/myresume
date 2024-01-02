@@ -1,0 +1,77 @@
+.services{
+    display: flex;
+    width: 90%;
+    margin:5.5% 0 10% 5%;
+	font-family: 'Readex Pro', sans-serif;
+    justify-content: space-evenly; 
+    
+   
+
+}
+
+.headCards{
+    color: #6856E0;
+    text-align: center;
+    
+ }
+ 
+
+.fullstack-card,.ui-ux-card,.responsive-mobile-card{
+    width: 24%;
+    font-family: 'Readex Pro', sans-serif;
+    background: linear-gradient(29.96deg, rgba(255, 255, 255, 0.05) 0.13%, rgba(255, 255, 255, 0.008) 49.66%, rgba(255, 255, 255, 0.05) 99.96%);
+    backdrop-filter: blur(2px);
+    text-align: left;
+    line-height: 27px;
+    height: auto;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: transform 0.5s, opacity 0.2s, box-shadow 0.2s;
+}
+.fullstack-card:hover,.ui-ux-card:hover,.responsive-mobile-card:hover{
+    transform: scale(95%); 
+    background-color: #2f237c;
+    color: white;
+    .headCards{
+       color: white;
+     }
+}
+
+.topServices{
+    font-family: 'Readex Pro', sans-serif;
+    text-align: center;
+    width: 51.5%;
+    color: #635f78;
+    margin-left: 25%;
+    line-height: 30px;
+}
+
+
+  
+@media (max-width: 576px) {
+ .topServices{
+    width: 30rem ;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+ }
+ .services{
+    display: block;
+}
+.headCards{
+   font-size: 2rem;
+}
+
+.fullstack-card,.ui-ux-card,.responsive-mobile-card{
+    width: 28rem;
+    margin-bottom: 6rem;
+    margin-left: 4.5rem;
+   
+}
+p{
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+ 
+}

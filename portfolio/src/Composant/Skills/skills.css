@@ -1,0 +1,91 @@
+#skills{
+    font-family: 'Readex Pro', sans-serif;
+     margin:    3rem 0 3rem 5rem;
+}
+
+.skillsContent{
+    width: 66rem;
+    display: flex;
+}
+.frontend{
+    width: 24rem;
+   
+}
+
+.backend{
+   margin-right: 2rem;
+   width: 22rem;
+}
+.others{
+    
+    width: 22rem;
+}
+.skill{
+    width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#iconSkills{
+    margin: 10px;
+  background-color: rgba(76, 76, 76, 0.36) ;
+    padding: 16px;
+    font-size: 33px;
+    border-radius: 10%;
+   transition: all 0.4s ease;
+}
+#iconSkills:hover {
+    background-color: #2f237c;
+  
+  }
+
+
+  
+@media (max-width: 576px) {
+    #skills{
+        margin-left: 4rem;
+        margin-top: 10rem;
+    }
+    #skills h2{
+       font-size: 2.4rem;
+    }
+    .skillsContent{
+      margin: 0rem;
+      width: 35rem;
+        display: block;
+    }
+   
+    .frontend ,.backend{
+        width: 28rem;
+        display: flex;
+        margin-bottom: 6rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-left: 4rem;
+    }
+    #iconSkills{
+        font-size: 4.4rem;
+        padding: 2rem;
+    }
+    .others{
+        width: 26rem;
+        margin-left: 4rem;
+        display: flex;
+        margin-bottom: 10rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+       
+    }
+    .skill{
+        width: 28rem;
+       
+    }
+  }
+
+
+
+
+
+  
+  
+ 

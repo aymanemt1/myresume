@@ -1,0 +1,159 @@
+
+header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1;
+  font-family: 'Readex Pro', sans-serif;
+	padding: 0.6rem 16.5rem ;
+  
+}
+#logo {
+  color: white;
+  font-size: 27px;
+  font-family: "Pacifico";
+  font-weight: normal;
+  margin-left: 3px;
+  text-decoration: none;
+}
+
+.FixedNav {
+	background-color: rgba(76, 76, 76, 0.36);
+	color: black;
+ 
+	border-radius: 5rem;
+	backdrop-filter: blur(10px);
+  
+}
+
+nav ul {
+	list-style: none;
+  
+	display: flex;
+ justify-content: center;
+	li {
+		font-weight: bold;
+	}
+}
+
+#rightNav{
+  width: 550px;
+  margin:0px 10px;
+  align-items: center;
+  color: white;
+  li{
+    list-style-type: none;
+  }
+ 
+}
+
+
+.nav-link{
+	text-decoration: none;
+   
+  font-size: 17px;
+  font-weight: 380;
+  margin-right: 25px;
+  transition: all 0.7s ease;
+}
+.nav-link:hover{
+  padding-left: 8px;
+  color: #6856E0;
+  
+}
+
+
+.btnOpen,.menu-btn{
+ display: none;
+ position: fixed;
+}
+
+
+#lang{
+  cursor: pointer;
+  color:white;
+  letter-spacing: 1px;
+  font-family: 'Readex Pro', sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding:0px 3px;
+  background: linear-gradient(to right, #6856E0, #b6b6b6) no-repeat;
+  font-size:17px;
+
+}
+
+
+@media (max-width: 576px) {
+  #lang{
+    font-size: 2px;
+  }
+  .option-en,.option-fr{
+   color: black;
+    font-size: 16px;
+    width: 10px;
+  }
+  
+  .btnOpen{
+    background: none;
+    border: none;
+    border-radius: 1rem;
+    display: inline-block;
+    position: inherit;
+  
+  }
+  .menu-btn{
+    background: none;
+    border: none;
+    display: block;
+    top: 2.5rcap;
+    right: 5rcap;
+    font-size: 3.8rem;
+    color: #6856E0;
+  }
+ 
+
+  #rightNav{
+  margin: 0;
+ }
+
+
+ nav ul {
+	display: block;
+  margin-bottom: 0;
+ }
+ #rightNav{
+  display: none;
+}
+#rightNav li{
+  margin: 3.2rem 0;
+  margin-left: 0;
+}
+ #rightNav.show{
+  display: block;
+  padding: 0;
+ }
+
+ .FixedNav{
+  padding: 6px;
+  width: 38rem;
+ }
+ header{
+  padding:3em;
+ }
+ #lang{
+  font-size:2.4rem ;
+  margin: 1rem;
+  padding: 0rem 2rem;
+ }
+.nav-link{
+  font-size:2.4rem ;
+  margin: 1rem;
+
+}
+
+#logo{
+  font-size: 43px;
+}
+ 
+  
+  }

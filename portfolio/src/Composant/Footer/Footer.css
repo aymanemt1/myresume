@@ -1,0 +1,107 @@
+
+.contact-info{
+	font-family: 'Readex Pro', sans-serif;
+   display: flex;
+   background: linear-gradient(29.96deg, rgba(255, 255, 255, 0.05) 0.13%, rgba(255, 255, 255, 0.008) 49.66%, rgba(255, 255, 255, 0.05) 99.96%);
+   backdrop-filter: blur(2px);
+   margin-top: 70px;
+   padding: 1px 120px;
+   justify-content: space-between;
+}
+
+#mail-icon,#phone-icon,#adress-icon{
+    font-size: 26px;
+
+    margin-right: 16px;
+}
+
+#insta-icon,#linkdein-icon,#fb-icon,#github-icon{
+    font-size: 27px;
+    margin-right: 16px;
+    color: #6856E0;
+}
+.info-personnel{
+    display: flex;
+    width: 73%;
+    justify-content: space-between;
+   
+    
+}
+
+#info_personnel{
+  
+  margin-top: 15px;
+  margin-right: 0px;
+}
+.icons{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 14px;
+    width: 220px;
+    justify-content: space-between;
+  }
+ 
+
+#signature{
+   width: 90px;
+    margin-top: 40px;
+
+}
+
+
+  
+@media (max-width: 576px) {
+   .contact-info{
+    display: block;
+    width: 29.6rem;
+    margin-top: 9rem;
+    padding: 3rem 6.5rem;
+    
+   }
+   .info-personnel{
+    display: block;
+    margin: 0;
+    width: 23rem;
+  
+   }
+   .info-personnel p{
+   font-size: 1.8rem;
+   width: 22rem;
+  
+   }
+   
+#mail-icon,#phone-icon,#adress-icon{
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+ 
+   h3{
+    margin-top: 64px;
+     font-size: 2.3rem;
+     width: 26rem;
+   }
+
+   .icons{
+       width: 25rem;
+       margin-bottom: 30px;
+}
+
+#insta-icon,#linkdein-icon,#fb-icon,#github-icon{
+  font-size: 4rem;
+  margin-right: 5rem;
+
+}
+
+#signature{
+    width: 15rem;
+    margin-left: 120px;
+     margin-bottom: 30px;
+ 
+ }
+ 
+
+   }
+
+
+   

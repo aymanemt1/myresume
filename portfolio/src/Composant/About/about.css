@@ -1,0 +1,173 @@
+#about{
+    display: flex;
+    width: 100%;
+    margin-top:70px;
+	font-family: 'Readex Pro', sans-serif;
+
+    justify-content: space-evenly;
+}
+
+.topAbout{
+	font-family: 'Readex Pro', sans-serif;
+    text-align: center;
+    width: 50%;
+    color: #635f78;
+    margin-left: 25%;
+    line-height: 30px;
+}
+.para{
+	font-family: 'Readex Pro', sans-serif;
+    background: linear-gradient(29.96deg, rgba(255, 255, 255, 0.05) 0.13%, rgba(255, 255, 255, 0.008) 49.66%, rgba(255, 255, 255, 0.05) 99.96%);
+    backdrop-filter: blur(2px);
+    text-align: left;
+    line-height: 27px;
+    padding: 38px 20px;
+    border-radius: 10px;
+}
+#AboutContent{
+   width: 42%;
+}
+h1{
+    text-align: center;
+	font-family: 'Readex Pro', sans-serif;
+
+    margin: 20px 0px;
+}
+#head_content,h2{
+    color: #6856E0;
+}
+
+  
+.timeline-wrapper {
+    position: relative;
+    padding: 2px 0;
+  }
+  .timeline-wrapper:last-child:before {
+    height: 0;
+  }
+  .timeline-wrapper:before {
+    content: "";
+    background: #474559;
+    width: 3px;
+    margin-top: 20px;
+    height: 100%;
+    position: absolute;
+    left: 38px;
+  }
+
+  .timeline-yr {
+    background:rgba(76, 76, 76, 0.36) ;
+    backdrop-filter: blur(10px);
+    border-radius: 100%;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    margin-top: 20px;
+    line-height: 75px;
+    text-align: center;
+     transition: all 0.7s ease;
+
+  }
+  .timeline-yr:hover{
+background-color: #2f237c;
+
+    backdrop-filter: blur(10px);
+   .year{
+    color: white;
+   }
+  }
+  .year {
+    color: #6856E0;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    line-height: 75px;
+  }
+  
+  .timeline-info {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 332px;
+    margin-left: 6em;
+  }
+  .timeline-info small {
+    color: #474559;
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+  }
+
+
+
+  
+@media (max-width: 576px) {
+    h1{
+        margin-left: 217px;
+    }
+    #head_content{
+     font-size: 2.3rem;
+  }
+    .topAbout{
+      width: 33rem ;
+    line-height: 2.4rem;
+   font-size: 1.6rem;
+   margin-left: 4.8rem;
+   margin-bottom: 5rem;
+    }
+  #about{
+    display: block;
+  }
+  #AboutContent{
+    margin-left: 5.7rem;
+    width: 30rem;
+    text-align: center;
+  }
+  .para{
+    width: 100%;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+  }
+  .education{
+    margin-left: 6rem;
+    margin-top:7rem;
+    width: 37rem;
+  }
+  
+  #education_head{
+      font-size: 2.5rem;
+      margin-left: -1rem;
+  }
+  .timeline-yr {
+    margin-top: 5rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .year{
+    font-size: 1.8rem;
+    padding-top: 1.5rem;
+  }
+
+  .timeline-wrapper:before {
+    margin-top: 8rem;
+    margin-left: 1.5rem;
+  }
+  .timeline-info small {
+    
+    font-size: 1.9rem;
+    
+  }
+  .timeline-info p{
+    margin-top: -2rem;
+  
+    font-size: 1.4rem;
+   
+  }
+  .timeline-info{
+    margin-left: 10rem;
+  }
+
+
+  
+  }
