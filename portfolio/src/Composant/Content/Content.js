@@ -33,10 +33,10 @@ export const Content = () => {
 
 
   const handleDownload = () => {
-    const pdfPath = require('../../Assets/CV.pdf');
+    const pdfPath = require('../../Assets/CV.docx');
     const link = document.createElement('a');
     link.href = pdfPath;
-    link.download = 'CV.pdf';
+    link.download = 'CV.docx';
     link.click();
   };
   return (

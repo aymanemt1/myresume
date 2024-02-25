@@ -98,15 +98,15 @@ nav ul {
     border: none;
     border-radius: 1rem;
     display: inline-block;
-    position: inherit;
+    position: relative;
   
   }
   .menu-btn{
     background: none;
     border: none;
     display: block;
-    top: 2.5rcap;
-    right: 5rcap;
+    top: 0.5em;
+    right: 1em;
     font-size: 3.8rem;
     color: #6856E0;
   }

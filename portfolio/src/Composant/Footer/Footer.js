@@ -11,11 +11,11 @@ export const Footer = () => {
 
     return (
         <div className='contact-info'>
-            <div>
+            {/* <div>
                 <div>
                     <img src={require('../../Assets/Signature.png')} id='signature' />
                 </div>
-            </div>
+            </div> */}
             <div className='info-personnel'>
                 <div id='info_personnel' >
                     <p><i className="fa-solid fa-location-dot" id='adress-icon'></i>Tangier, Morocco</p>

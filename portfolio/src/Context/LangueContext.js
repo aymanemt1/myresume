@@ -1,5 +1,4 @@
-import axios from 'axios'
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useState } from 'react'
 
 export const LangueContext = createContext()
 
