@@ -105,9 +105,8 @@ nav ul {
     background: none;
     border: none;
     display: block;
-    margin-top: -1.5em;
+    top: -4em;
     right: 1em;
-    position: fixed;
     font-size: 3.8rem;
     color: #6856E0;
   }
