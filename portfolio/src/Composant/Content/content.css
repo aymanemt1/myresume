@@ -159,25 +159,3 @@ width: 41rem;
 
 }
 
-
-  
-@media (max-width: 766px) {
-	.content{
-		width: 100%;
-		margin: 0;
-	}
-	#leftContent{
-    margin-left: 7.8rem;
-    margin-top: 6rem;
-	 width: 70%;
-	}
-	#leftContent h1{
- font-size: 50px;
-	}
-	#hero{
-	 width: 566px;
-	}
-  #myname{
-    margin-left: 3rem;
-  }
-   }
