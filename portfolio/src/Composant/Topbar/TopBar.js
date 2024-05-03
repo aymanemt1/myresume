@@ -55,21 +55,20 @@ const toggleMenu = () => {
   <form onSubmit={handlLangue} >
       <select onChange={(e)=>setlangue(e.target.value)} id='lang' value={langue}>
         <option value="en" className='option-en'>
-          en
+          En
         </option>
         <option value="fr" className='option-fr'>
-          fr
+          Fr
         </option>
       </select>
     </form>
   </ul>
-  <button className='btnOpen' onClick={toggleMenu}>
-  {showMenu ? (
-        <i className="menu-btn fa-solid fa-xmark" />
-        ) : (
-          <i className="menu-btn fa-solid fa-bars" />
-      )}
-      </button>
+         
+          {showMenu ? (
+       <i className="menu-btn fa-solid fa-xmark"  onClick={toggleMenu} /> 
+          ) : (
+            <i className="menu-btn fa-solid fa-bars" onClick={toggleMenu}/> 
+          )}
 		</ul>
 	</nav>
 </header>

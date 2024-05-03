@@ -171,3 +171,17 @@ background-color: #2f237c;
 
   
   }
+
+  
+  
+@media (max-width: 766px) {
+
+  #aboutParent h1,h4{
+    text-align: center;
+    margin: auto;
+  }
+  #about{
+    width: 100%;
+    
+  }
+}

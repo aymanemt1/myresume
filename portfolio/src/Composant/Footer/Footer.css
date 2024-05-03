@@ -22,32 +22,33 @@
 }
 .info-personnel{
     display: flex;
-    width: 73%;
+    width: 75%;
     justify-content: space-between;
-   
+   margin-top: 1rem;
     
 }
 
 #info_personnel{
-  
-  margin-top: 15px;
+  margin-top: -7px;
   margin-right: 0px;
 }
 .icons{
     display: flex;
     padding-top: 10px;
-    padding-left: 14px;
+    padding-left:5.4rem;
     width: 220px;
     justify-content: space-between;
   }
  
-
-#signature{
-   width: 90px;
-    margin-top: 40px;
-
-}
-
+  #logofotter{
+    margin-top: 3rem;
+    color: white;
+    font-size: 29px;
+    font-family: "Pacifico";
+    font-weight: normal;
+    margin-left: 3px;
+    text-decoration: none;
+  }
 
   
 @media (max-width: 576px) {

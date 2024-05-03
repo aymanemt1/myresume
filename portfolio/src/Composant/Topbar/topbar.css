@@ -63,9 +63,9 @@ nav ul {
 }
 
 
-.btnOpen,.menu-btn{
+.menu-btn{
  display: none;
- position: fixed;
+
 }
 
 
@@ -76,10 +76,18 @@ nav ul {
   font-family: 'Readex Pro', sans-serif;
   border: none;
   border-radius: 5px;
+  outline: none;
   padding:0px 3px;
   background: linear-gradient(to right, #6856E0, #b6b6b6) no-repeat;
   font-size:17px;
-
+}
+#lang .option-en{
+  background-color: white;
+  color: black;
+}
+#lang .option-fr{
+  background-color: white;
+  color: black;
 }
 
 
@@ -93,20 +101,12 @@ nav ul {
     width: 10px;
   }
   
-  .btnOpen{
-    background: none;
-    border: none;
-    border-radius: 1rem;
-    display: inline-block;
-    position: relative;
   
-  }
   .menu-btn{
-    background: none;
-    border: none;
-    display: block;
+    display: flex;
+    position: absolute;
+    right: 2.9rem;
     top: 1.5rem;
-    right: 1em;
     font-size: 3.8rem;
     color: #6856E0;
   }
@@ -156,4 +156,11 @@ nav ul {
 }
  
   
+  }
+
+
+  @media (max-width: 766px) {
+   header{
+    width: 100%;
+   }
   }
