@@ -63,12 +63,13 @@ const toggleMenu = () => {
       </select>
     </form>
   </ul>
-         
-          {showMenu ? (
-       <i className="menu-btn fa-solid fa-xmark"  onClick={toggleMenu} /> 
-          ) : (
-            <i className="menu-btn fa-solid fa-bars" onClick={toggleMenu}/> 
-          )}
+  <button className='btnOpen' onClick={toggleMenu}>
+  {showMenu ? (
+        <i className="menu-btn fa-solid fa-xmark" />
+        ) : (
+          <i className="menu-btn fa-solid fa-bars" />
+      )}
+      </button>
 		</ul>
 	</nav>
 </header>

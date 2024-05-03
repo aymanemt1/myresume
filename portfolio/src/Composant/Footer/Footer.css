@@ -61,13 +61,16 @@
    }
    .info-personnel{
     display: block;
-    margin: 0;
+    margin: 3rem 0 0 0;
     width: 23rem;
   
    }
    .info-personnel p{
    font-size: 1.8rem;
    width: 22rem;
+   margin-top: 2rem;
+   display: flex;
+   gap: 10px;
   
    }
    
@@ -94,11 +97,23 @@
 
 }
 
-#signature{
-    width: 15rem;
-    margin-left: 120px;
-     margin-bottom: 30px;
- 
+
+ .contact-info{
+  width: 33.3rem;
+ }
+ .contact-info h3{
+ width: 34rem;
+ text-align: center;
+ line-height: 48px;
+
+ }
+ #logofotter{
+  font-size: 4rem;
+  margin-left: 7rem;
+ }
+ .icons{
+  margin-left: -3rem;
+  margin-bottom: 4rem;
  }
  
 
