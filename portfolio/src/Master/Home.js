@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 
 import { Content } from "../Composant/Content/Content";
@@ -11,11 +11,22 @@ import { Contact } from "../Composant/Contact/Contact";
 import { Footer } from "../Composant/Footer/Footer";
 import { TopBar } from "../Composant/Topbar/TopBar";
 import { Cursor } from "../Composant/Cursor/Cursor";
+import ScrollProgressBar from "../Composant/Progress Bar/ScrollProgressBar";
 
 export const Home = () => {
+  const [scrollWidth, setScrollWidth] = useState(0);
+
+  const handleScrollWidth = (width) => {
+    setScrollWidth(width);
+  };
+
   return (
     <div id="homeParent">
-      <TopBar />
+      <ScrollProgressBar
+        onScrollWidthChange={handleScrollWidth}
+      />
+
+      <TopBar scrollWidth={scrollWidth} />
 
       <Cursor />
 
