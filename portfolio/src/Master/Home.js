@@ -9,10 +9,13 @@ import Services from "../Composant/Services/Services";
 import { Project } from "../Composant/Projects/Project";
 import { Contact } from "../Composant/Contact/Contact";
 import { Footer } from "../Composant/Footer/Footer";
+import { TopBar } from "../Composant/Topbar/TopBar";
 
 export const Home = () => {
   return (
     <div id="homeParent">
+      <TopBar />
+
       <Content />
 
       <div id="aboutParent">
