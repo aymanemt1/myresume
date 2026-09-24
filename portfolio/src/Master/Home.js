@@ -8,6 +8,7 @@ import { MySkills } from "../Composant/Skills/Skills";
 import Services from "../Composant/Services/Services";
 import { Project } from "../Composant/Projects/Project";
 import { Contact } from "../Composant/Contact/Contact";
+import { Footer } from "../Composant/Footer/Footer";
 
 export const Home = () => {
   return (
@@ -31,6 +32,8 @@ export const Home = () => {
       <div id="ContactParent">
         <Contact />
       </div>
+
+      <Footer />
     </div>
   );
 };
