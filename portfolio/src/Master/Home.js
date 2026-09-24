@@ -12,6 +12,7 @@ import { Footer } from "../Composant/Footer/Footer";
 import { TopBar } from "../Composant/Topbar/TopBar";
 import { Cursor } from "../Composant/Cursor/Cursor";
 import ScrollProgressBar from "../Composant/Progress Bar/ScrollProgressBar";
+import ScrollButton from "../Composant/BtnTop/scrollToTop";
 
 export const Home = () => {
   const [scrollWidth, setScrollWidth] = useState(0);
@@ -42,6 +43,8 @@ export const Home = () => {
         <Services />
       </div>
 
+      <ScrollButton />
+
       <div id="projectsPranet">
         <Project />
       </div>
@@ -54,4 +57,3 @@ export const Home = () => {
     </div>
   );
 };
-
