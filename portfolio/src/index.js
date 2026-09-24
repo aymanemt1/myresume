@@ -1,13 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { App } from './Master/App';
+import { BrowserRouter } from 'react-router-dom';
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { App } from "./Master/App";
-import { LangueProvider } from "./Context/LangueContext";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <LangueProvider>
+  <BrowserRouter>
     <App />
-  </LangueProvider>
+  </BrowserRouter>
 );
