@@ -1,14 +1,6 @@
-import React, { useEffect } from 'react';
-import { Home } from './Home';
-import { LangueProvider } from '../Context/LangueContext';
+import React from "react";
+import { Home } from "./Home";
 
 export const App = () => {
-
-  return (
-    <>
-    <LangueProvider>
-      <Home />
-    </LangueProvider>
-    </>
-  );
+  return <Home />;
 };
