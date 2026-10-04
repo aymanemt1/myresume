@@ -101,16 +101,7 @@ export const Project = () => {
           <a href='https://github.com/aymanemt1/PRJ-FASHION.git'><button className='code-btn'>View Code</button></a>
           <a href='https://github.com/aymanemt1/PRJ-FASHION.git'><button className='demo-btn'>View Demo</button></a>
         </div> */}
-      </div>
 
-      <h1 className="demos-title"><span>{langue == 'fr' ? 'Démos WebStack Studio' : 'WebStack Studio Demos'}</span></h1>
-      <h4 className='topProject'>
-        {langue == 'fr'
-          ? "Une sélection de sites vitrines réalisés pour des clients marocains et français."
-          : "A selection of showcase websites built for Moroccan and French clients."}
-      </h4>
-
-      <div className="demos-grid">
         {DEMOS.map((demo) => (
           <div className="project-card" data-aos="zoom-out"
             data-aos-duration="700" key={demo.slug}>

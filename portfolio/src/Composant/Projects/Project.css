@@ -9,12 +9,17 @@
 
 .projects{
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
     margin:5.5% 0 10% 5%;
 	font-family: 'Readex Pro', sans-serif;
-    justify-content: space-evenly; 
-   
-    
+    justify-content: space-evenly;
+
+
+}
+
+.projects .project-card{
+    margin-bottom: 3rem;
 }
 
 .project-card{
@@ -103,31 +108,3 @@ cursor: pointer;
 }
     
    }
-.demos-title{
-    font-family: 'Readex Pro', sans-serif;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.demos-title span{
-    border-bottom: 3px solid #6856E0;
-}
-
-.demos-grid{
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: 4% 0 10% 5%;
-    font-family: 'Readex Pro', sans-serif;
-    justify-content: space-evenly;
-}
-
-.demos-grid .project-card{
-    margin-bottom: 3rem;
-}
-
-@media (max-width: 576px) {
-    .demos-grid{
-        display: block;
-    }
-}
