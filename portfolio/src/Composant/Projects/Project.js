@@ -61,56 +61,57 @@ export const Project = () => {
     lang.id == langue
   ))
 
+  const mainProjects = [
+    {
+      key: 'mt-fashion',
+      img: require('../../Assets/Projects/project1.jpg'),
+      desc: Project.description1,
+      code: 'https://github.com/aymanemt1/PRJ-FASHION.git',
+      demo: 'https://www.linkedin.com/posts/aymanemoutoute1_reactjs-laravel-api-activity-7145123304230572032-RSj2?utm_source=share&utm_medium=member_ios',
+    },
+    {
+      key: 'quiz',
+      img: require('../../Assets/Projects/prj2.png'),
+      desc: Project.description2,
+      code: 'https://github.com/aymanemt1/Quiz_App.git',
+      demo: 'https://aymanemt1.github.io/Quiz_App/',
+    },
+  ]
+
+  const demoCards = DEMOS.map((demo) => ({
+    key: demo.slug,
+    img: DEMO_IMAGES[demo.slug],
+    name: demo.name,
+    desc: langue == 'fr' ? demo.fr : demo.en,
+    demo: DEMO_BASE + demo.slug + '/',
+  }))
+
+  const allCards = [...mainProjects, ...demoCards]
+
+  const renderCard = (c) => (
+    <div className="project-card" key={c.key}>
+      <img src={c.img} id='project_img' alt={c.name || 'project'} />
+      <p>{c.name ? <><strong>{c.name}</strong><br /></> : null}{c.desc}</p>
+      <div className="card-btns">
+        {c.code && <a href={c.code} target="_blank" rel="noreferrer"><button className='code-btn'>View Code</button></a>}
+        <a href={c.demo} target="_blank" rel="noreferrer"><button className='demo-btn'>View Demo</button></a>
+      </div>
+    </div>
+  )
+
   return (
     <>
       <h1><span style={{ borderBottom: '3px solid #6856E0' }}> {Project.title} </span></h1>
       <h4 className='topProject'>{Project.sous_title}</h4>
 
-      <div className="projects" >
-
-        <div className="project-card" data-aos="zoom-out"
-          data-aos-duration="700">
-          <img src={require('../../Assets/Projects/project1.jpg')} id='project_img' />
-          <p>{Project.description1}
-          </p>
-
-          <a href='https://github.com/aymanemt1/PRJ-FASHION.git'><button className='code-btn'>View Code</button></a>
-          <a href='https://www.linkedin.com/posts/aymanemoutoute1_reactjs-laravel-api-activity-7145123304230572032-RSj2?utm_source=share&utm_medium=member_ios'><button className='demo-btn'>View Demo</button></a>
-
+      <div className="projects-slider" data-aos="zoom-out" data-aos-duration="700">
+        <div className="projects-track">
+          {[0, 1].map((copy) => (
+            <React.Fragment key={copy}>
+              {allCards.map((c) => renderCard({ ...c, key: `${c.key}-${copy}` }))}
+            </React.Fragment>
+          ))}
         </div>
-
-        <div className="project-card" data-aos="zoom-out"
-          data-aos-duration="700">
-          <img src={require('../../Assets/Projects/prj2.png')} id='project_img' />
-
-          <p>{Project.description2}
-          </p>
-
-
-          <a href='https://github.com/aymanemt1/Quiz_App.git'><button className='code-btn'>View Code</button></a>
-          <a href='https://aymanemt1.github.io/Quiz_App/'><button className='demo-btn'>View Demo</button></a>
-        </div>
-         {/* <div className="project-card" data-aos="zoom-out"
-          data-aos-duration="700">
-          <img src={require('../../Assets/Projects/project1.jpg')} id='project_img' />
-
-          <p>This is my react project "QUIZ” !  it's quiz related to frontend and backend technologies, where users can select a language and likely be presented with questions related to that language..
-          </p>
-
-
-          <a href='https://github.com/aymanemt1/PRJ-FASHION.git'><button className='code-btn'>View Code</button></a>
-          <a href='https://github.com/aymanemt1/PRJ-FASHION.git'><button className='demo-btn'>View Demo</button></a>
-        </div> */}
-
-        {DEMOS.map((demo) => (
-          <div className="project-card" data-aos="zoom-out"
-            data-aos-duration="700" key={demo.slug}>
-            <img src={DEMO_IMAGES[demo.slug]} id='project_img' alt={demo.name} />
-            <p><strong>{demo.name}</strong><br />{langue == 'fr' ? demo.fr : demo.en}
-            </p>
-            <a href={DEMO_BASE + demo.slug + '/'} target="_blank" rel="noreferrer"><button className='demo-btn'>View Demo</button></a>
-          </div>
-        ))}
       </div>
     </>
   )
