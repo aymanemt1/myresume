@@ -14,178 +14,16 @@
     height: auto;
   }
 
-  /* ---------- About ---------- */
-  #aboutParent h1 {
-    margin-left: 1.2rem !important;
-  }
-  .topAbout {
-    width: auto !important;
-    margin: 0 1.2rem 2rem !important;
-    font-size: 1.05rem !important;
-    line-height: 1.65 !important;
-  }
-  #head_content {
-    font-size: 1.9rem !important;
-  }
-  #about {
-    display: block !important;
-    padding: 0 1.2rem;
-  }
-  #AboutContent {
-    margin: 0 !important;
-    width: 100% !important;
-    text-align: left !important;
-  }
-  .para {
-    font-size: 1rem !important;
-    line-height: 1.7 !important;
-    width: 100% !important;
-  }
-  .timeline-info {
-    margin-left: 0 !important;
-    max-width: 100% !important;
-  }
+  /* ---------- About: has its own rebuilt mobile block in about.css ---------- */
 
-  /* ---------- Skills ---------- */
-  #skills {
-    margin: 2rem 1.2rem !important;
-  }
-  #skills h2 {
-    font-size: 1.5rem !important;
-  }
-  .skillsContent {
-    width: 100% !important;
-    margin: 0 !important;
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: 1.6rem;
-  }
-  .frontend,
-  .backend,
-  .others {
-    width: 100% !important;
-    margin: 0 !important;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    justify-content: flex-start;
-  }
-  .skill {
-    width: 100% !important;
-    justify-content: flex-start !important;
-  }
-  #iconSkills {
-    font-size: 1.9rem !important;
-    padding: 0.85rem !important;
-    margin: 6px !important;
-  }
+  /* ---------- Skills: has its own rebuilt mobile block in skills.css ---------- */
 
-  /* ---------- Services ---------- */
-  .topServices {
-    width: auto !important;
-    margin: 0 1.2rem 2rem !important;
-    font-size: 1.05rem !important;
-    line-height: 1.65 !important;
-  }
-  .services {
-    display: flex !important;
-    flex-direction: column;
-    width: auto !important;
-    margin: 0 1.2rem 3rem !important;
-    gap: 1.2rem;
-  }
-  .fullstack-card,
-  .ui-ux-card,
-  .responsive-mobile-card {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 1.3rem 1.4rem !important;
-    box-sizing: border-box;
-  }
-  .services p {
-    font-size: 1rem !important;
-    line-height: 1.65 !important;
-  }
-  .headCards {
-    font-size: 1.25rem !important;
-  }
+  /* ---------- Services: has its own rebuilt mobile block in Services.css ---------- */
 
-  /* ---------- Contact ---------- */
-  #contactme {
-    margin: 2rem 1.2rem 0 !important;
-  }
-  .topContact {
-    width: auto !important;
-    margin: 0 1.2rem 1.5rem !important;
-    font-size: 1.05rem !important;
-    line-height: 1.65 !important;
-  }
-  .top-form {
-    display: block !important;
-    width: auto !important;
-    margin: 1.5rem 1.2rem !important;
-  }
-  .name,
-  .email,
-  .message {
-    width: 100% !important;
-    box-sizing: border-box;
-    font-size: 1rem !important;
-    padding: 0.9rem !important;
-    margin-top: 1rem !important;
-  }
+  /* ---------- Contact: has its own rebuilt mobile block in Contact.css ---------- */
 
-  /* ---------- Footer ---------- */
-  .contact-info {
-    display: block !important;
-    width: auto !important;
-    margin: 3rem 0 0 !important;
-    padding: 2rem 1.4rem !important;
-  }
-  .contact-info h3 {
-    width: 100% !important;
-    font-size: 1.35rem !important;
-    text-align: left !important;
-    line-height: 1.5 !important;
-    margin-top: 1.2rem !important;
-  }
-  .info-personnel {
-    display: block !important;
-    width: 100% !important;
-    margin: 1.2rem 0 0 !important;
-  }
-  .info-personnel p {
-    font-size: 1rem !important;
-    width: 100% !important;
-    margin-top: 0.9rem !important;
-  }
-  #mail-icon,
-  #phone-icon,
-  #adress-icon {
-    font-size: 1.25rem !important;
-    display: inline !important;
-    margin-bottom: 0 !important;
-  }
-  .icons {
-    width: auto !important;
-    margin: 1.4rem 0 0 !important;
-    padding: 0 !important;
-    justify-content: flex-start !important;
-    gap: 1.3rem;
-  }
-  #insta-icon,
-  #linkdein-icon,
-  #fb-icon,
-  #github-icon {
-    font-size: 1.7rem !important;
-    margin-right: 0 !important;
-  }
-  #logofotter {
-    font-size: 1.8rem !important;
-    margin-left: 0 !important;
-  }
-
-  /* ---------- Section titles: centered on mobile ---------- */
+  /* ---------- Footer: has its own rebuilt mobile block in Footer.css ---------- */
+/* ---------- Section titles: centered on mobile ---------- */
   #servicesParent h1,
   #projectsPranet h1,
   #ContactParent h1 {
@@ -233,23 +71,10 @@
     letter-spacing: 1px;
     margin: -1.6rem 0 2.2rem;
   }
-  .FixedNav {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
-  #lang {
-    font-size: 0.9rem !important;
-  }
-  .menu-btn {
-    font-size: 2rem !important;
-    margin-top: 0 !important;
-  }
-  #rightNav.show {
-    background: rgba(5, 11, 17, 0.97);
-    border-bottom: 1px solid var(--card-border, rgba(139, 124, 246, 0.2));
-  }
-  #rightNav li {
-    margin: 1.3rem 0 !important;
+  /* Topbar has its own rebuilt mobile block in topbar.css — nothing needed here.
+     Just offset the hero so the fixed navbar never overlaps it. */
+  .hero-section {
+    padding-top: 104px !important;
   }
 }
 

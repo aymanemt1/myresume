@@ -41,54 +41,57 @@
 
 
   
-@media (max-width: 576px) {
-    #skills{
-        margin-left: 4rem;
-        margin-top: 10rem;
-    }
-    #skills h2{
-       font-size: 2.4rem;
-    }
-    .skillsContent{
-      margin: 0rem;
-      width: 35rem;
-        display: block;
-    }
-   
-    .frontend ,.backend{
-        width: 28rem;
-        display: flex;
-        margin-bottom: 6rem;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin-left: 4rem;
-    }
-    #iconSkills{
-        font-size: 4.4rem;
-        padding: 2rem;
-    }
-    .others{
-        width: 26rem;
-        margin-left: 4rem;
-        display: flex;
-        margin-bottom: 10rem;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-       
-    }
-    .skill{
-        width: 28rem;
-       
-    }
+/* ================= Mobile skills — rebuilt ================= */
+@media (max-width: 768px) {
+  #skills {
+    margin: 0;
+    padding: 0 1.1rem;
   }
 
+  #skills h2 {
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    background: linear-gradient(135deg, #c9bfff, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
+  .skillsContent {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 
+  .frontend, .backend, .others {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(139, 124, 246, 0.16);
+    border-radius: 1.2rem;
+    padding: 1.1rem 0.7rem;
+  }
 
+  .skill {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-  
-  
- 
+  #iconSkills {
+    font-size: 2rem;
+    padding: 0.8rem;
+  }
+}
+
 /* Skill icon + label */
 .skill-item {
   display: inline-flex;

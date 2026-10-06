@@ -92,6 +92,10 @@ export const Content = () => {
         <ThreeBG />
         <div className="hero-inner">
           <div id='leftContent'>
+            <span className="hero-badge">
+              <span className="badge-dot" />
+              {langue === 'fr' ? 'Disponible pour projets' : 'Available for work'}
+            </span>
             <h1 data-aos="zoom-out-right" data-aos-duration="1000" className="text" id='text1'>{Content.title1}</h1>
             <h1 data-aos="zoom-out-right" data-aos-duration="1400" className="text" style={{ marginLeft: "70px" }}>{Content.title2}</h1>
             <h1 data-aos="zoom-out-right" data-aos-duration="1800" className="text" id='text3' >{Content.title3}</h1>

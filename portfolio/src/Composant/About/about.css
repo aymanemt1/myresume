@@ -102,75 +102,115 @@ background-color: #2f237c;
 
 
   
-@media (max-width: 576px) {
-    #aboutParent h1{
-        margin-left: 217px;
-    }
-    #head_content{
-     font-size: 2.3rem;
+/* ================= Mobile about — rebuilt ================= */
+@media (max-width: 768px) {
+  #aboutParent {
+    padding: 0 1.1rem;
   }
-    .topAbout{
-      width: 33rem ;
-    line-height: 2.4rem;
-   font-size: 1.6rem;
-   margin-left: 4.8rem;
-   margin-bottom: 5rem;
-    }
-  #about{
-    display: block;
+
+  #aboutParent h1 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.75rem;
   }
-  #AboutContent{
-    margin-left: 5.7rem;
-    width: 30rem;
+
+  #head_content {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .topAbout {
+    width: auto;
+    margin: 0 0.4rem 2rem;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: #a49fc0;
     text-align: center;
   }
-  .para{
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  #AboutContent {
+    margin: 0;
     width: 100%;
-    line-height: 2.5rem;
-    font-size: 1.4rem;
+    text-align: left;
   }
-  .education{
-    margin-left: 6rem;
-    margin-top:7rem;
-    width: 37rem;
+
+  .para {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #c9c4e2;
   }
-  
-  #education_head{
-      font-size: 2.5rem;
-      margin-left: -1rem;
+
+  .education {
+    margin: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(139, 124, 246, 0.2);
+    border-radius: 1.4rem;
+    padding: 1.4rem 1.2rem;
   }
-  .timeline-yr {
-    margin-top: 5rem;
-    width: 8rem;
-    height: 8rem;
+
+  #education_head {
+    font-size: 1.3rem;
+    margin: 0 0 0.6rem;
+    text-align: center;
   }
-  .year{
-    font-size: 1.8rem;
-    padding-top: 1.5rem;
+
+  .timeline-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.9rem 0;
   }
 
   .timeline-wrapper:before {
-    margin-top: 8rem;
-    margin-left: 1.5rem;
+    display: none;
   }
+
+  .timeline-yr {
+    margin: 0;
+    width: 3.6rem;
+    height: 3.6rem;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(104, 86, 224, 0.16);
+    border: 1px solid rgba(139, 124, 246, 0.35);
+  }
+
+  .year {
+    font-size: 0.85rem;
+    padding: 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .timeline-info {
+    margin: 0;
+    max-width: 100%;
+  }
+
   .timeline-info small {
-    
-    font-size: 1.9rem;
-    
-  }
-  .timeline-info p{
-    margin-top: -2rem;
-  
-    font-size: 1.4rem;
-   
-  }
-  .timeline-info{
-    margin-left: 10rem;
+    font-size: 1.02rem;
+    margin-left: 0;
   }
 
-
-  
+  .timeline-info p {
+    margin-top: 0.25rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #a49fc0;
   }
+}
 
   
   

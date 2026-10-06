@@ -51,73 +51,91 @@
   }
 
   
-@media (max-width: 576px) {
-   .contact-info{
-    display: block;
-    width: 29.6rem;
-    margin-top: 9rem;
-    padding: 3rem 6.5rem;
-    
-   }
-   .info-personnel{
-    display: block;
-    margin: 3rem 0 0 0;
-    width: 23rem;
-  
-   }
-   .info-personnel p{
-   font-size: 1.8rem;
-   width: 22rem;
-   margin-top: 2rem;
-   display: flex;
-   gap: 10px;
-  
-   }
-   
-#mail-icon,#phone-icon,#adress-icon{
-  font-size: 3rem;
-  margin-bottom: 1.2rem;
-  display: block;
+/* ================= Mobile footer — rebuilt ================= */
+@media (max-width: 768px) {
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin: 3.5rem 0 0;
+    padding: 2rem 1.3rem 2.4rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(139, 124, 246, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  #logofotter {
+    font-size: 1.7rem;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #c9bfff, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .contact-info h3 {
+    width: 100%;
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+    color: #a49fc0;
+  }
+
+  .info-personnel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .info-personnel p {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.95rem;
+    width: 100%;
+    margin: 0;
+    color: #c9c4e2;
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(139, 124, 246, 0.16);
+    border-radius: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+
+  #mail-icon, #phone-icon, #adress-icon {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #8b7cf6;
+    flex-shrink: 0;
+  }
+
+  .icons {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.1rem;
+  }
+
+  .icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 1rem;
+    background: rgba(104, 86, 224, 0.14);
+    border: 1px solid rgba(139, 124, 246, 0.3);
+  }
+
+  #insta-icon, #linkdein-icon, #fb-icon, #github-icon {
+    font-size: 1.35rem;
+    margin: 0;
+  }
 }
- 
-   h3{
-    margin-top: 64px;
-     font-size: 2.3rem;
-     width: 26rem;
-   }
-
-   .icons{
-       width: 25rem;
-       margin-bottom: 30px;
-}
-
-#insta-icon,#linkdein-icon,#fb-icon,#github-icon{
-  font-size: 4rem;
-  margin-right: 5rem;
-
-}
-
-
- .contact-info{
-  width: 33.3rem;
- }
- .contact-info h3{
- width: 34rem;
- text-align: center;
- line-height: 48px;
-
- }
- #logofotter{
-  font-size: 4rem;
-  margin-left: 7rem;
- }
- .icons{
-  margin-left: -3rem;
-  margin-bottom: 4rem;
- }
- 
-
-   }
-
-
-   

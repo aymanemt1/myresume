@@ -48,30 +48,69 @@
 
 
   
-@media (max-width: 576px) {
- .topServices{
-    width: 30rem ;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    margin-left: 7rem;
-    margin-bottom: 5rem;
- }
- .services{
-    display: block;
-}
-.headCards{
-   font-size: 2rem;
-}
+/* ================= Mobile services — rebuilt ================= */
+@media (max-width: 768px) {
+  #servicesParent {
+    padding: 0 1.1rem;
+  }
 
-.fullstack-card,.ui-ux-card,.responsive-mobile-card{
-    width: 28rem;
-    margin-bottom: 6rem;
-    margin-left: 4.5rem;
-   
-}
-p{
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-}
- 
+  #servicesParent h1 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  .topServices {
+    width: auto;
+    margin: 0 0.4rem 1.8rem;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: #a49fc0;
+    text-align: center;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    width: 100%;
+    margin: 0 0 3rem;
+  }
+
+  .fullstack-card,
+  .ui-ux-card,
+  .responsive-mobile-card {
+    width: 100%;
+    margin: 0;
+    padding: 1.4rem 1.3rem;
+    box-sizing: border-box;
+    border-radius: 1.3rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(139, 124, 246, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .fullstack-card:active,
+  .ui-ux-card:active,
+  .responsive-mobile-card:active {
+    transform: scale(0.98);
+  }
+
+  .headCards {
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem;
+    background: linear-gradient(135deg, #c9bfff, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .services p {
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: #c9c4e2;
+    margin: 0;
+  }
 }
