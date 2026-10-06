@@ -5,8 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000e17;
-  transition: opacity 0.55s ease, visibility 0.55s ease;
+  padding: 1.5rem;
+  background:
+    radial-gradient(700px 380px at 50% 38%, rgba(104, 86, 224, 0.16), transparent 65%),
+    #000e17;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .preloader.leaving {
@@ -16,28 +19,55 @@
 
 .preloader-inner {
   text-align: center;
+  max-width: 100%;
 }
 
 .preloader-logo {
-  font-size: 3.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.08em;
+  font-size: clamp(2.1rem, 9vw, 3.8rem);
   font-weight: 800;
-  color: #fff;
-  letter-spacing: 2px;
-  margin-bottom: 1.6rem;
-  animation: preloader-pulse 1.2s ease-in-out infinite;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.9rem;
+  font-family: 'Readex Pro', sans-serif;
 }
 
-.preloader-logo span {
-  color: #8b7cf6;
+.pre-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(26px) scale(0.9);
+  background: linear-gradient(135deg, #c9bfff 10%, #8b7cf6 45%, #22d3ee 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pre-letter-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  text-shadow: 0 0 34px rgba(104, 86, 224, 0.35);
 }
 
-@keyframes preloader-pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.06); opacity: 0.75; }
+@keyframes pre-letter-in {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.preloader-tag {
+  font-size: clamp(0.72rem, 3.2vw, 0.95rem);
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #8f8aa8;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: pre-fade-in 0.7s ease 0.7s forwards;
+}
+
+@keyframes pre-fade-in {
+  to { opacity: 1; }
 }
 
 .preloader-bar {
-  width: 240px;
+  width: min(260px, 68vw);
   height: 4px;
   margin: 0 auto;
   border-radius: 999px;
@@ -61,6 +91,21 @@
   letter-spacing: 2px;
 }
 
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .preloader-logo {
+    letter-spacing: 0.08em;
+  }
+  .preloader-tag {
+    letter-spacing: 2.2px;
+    margin-bottom: 1.6rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .preloader-logo { animation: none; }
+  .pre-letter,
+  .preloader-tag {
+    animation-duration: 0.01s;
+    animation-delay: 0s;
+  }
 }
