@@ -26,11 +26,16 @@ export const Experience = () => {
                 </div>
                 <span className="exp-period">{job.period}</span>
               </div>
-              <ul className="exp-points">
-                {job.points.map((pt, j) => (
-                  <li key={j}>{pt}</li>
-                ))}
-              </ul>
+              {job.sections.map((sec, k) => (
+                <div className="exp-sec" key={k}>
+                  {sec.head ? <h4 className="exp-sec-head">{sec.head}</h4> : null}
+                  <ul className="exp-points">
+                    {sec.items.map((pt, j) => (
+                      <li key={j}>{pt}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         ))}

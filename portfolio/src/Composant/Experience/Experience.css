@@ -154,3 +154,24 @@
     font-size: 0.9rem;
   }
 }
+
+.exp-sec {
+  margin-top: 0.9rem;
+}
+
+.exp-sec:first-of-type {
+  margin-top: 0.2rem;
+}
+
+.exp-sec-head {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #cfc9f5;
+  letter-spacing: 0.3px;
+}
+
+.exp-sec-head::before {
+  content: "▸ ";
+  color: #22d3ee;
+}

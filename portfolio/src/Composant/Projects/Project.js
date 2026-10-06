@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { LangueContext } from '../../Context/LangueContext'
 import { Translate } from './ProjectsTranslate'
 import './Project.css'
@@ -128,6 +128,18 @@ export const Project = () => {
 
   const allCards = [...mainProjects, ...demoCards]
 
+  /* On mobile each project is rendered only once (no loop copy);
+     desktop keeps the second copy for the seamless sliding loop */
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)');
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+  const copies = isMobile ? [0] : [0, 1];
+
   const renderCard = (c, copy) => (
     <div className={`project-card${copy === 1 ? ' dup-copy' : ''}`} key={c.key}>
       <img src={c.img} id='project_img' alt={c.name || 'project'} />
@@ -146,7 +158,7 @@ export const Project = () => {
 
       <div className="projects-slider" data-aos="zoom-out" data-aos-duration="700" ref={sliderRef}>
         <div className="projects-track">
-          {[0, 1].map((copy) => (
+          {copies.map((copy) => (
             <React.Fragment key={copy}>
               {allCards.map((c) => renderCard({ ...c, key: `${c.key}-${copy}` }, copy))}
             </React.Fragment>
