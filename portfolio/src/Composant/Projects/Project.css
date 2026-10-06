@@ -156,17 +156,114 @@ cursor: pointer;
   z-index: 2;
 }
 
+/* ================= Mobile projects: one small card per line ================= */
 @media (max-width: 768px) {
+  #projectsPranet {
+    padding: 0 1.1rem;
+  }
+
+  .topProject {
+    width: auto;
+    margin: 0 0.4rem 1.6rem;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: #a49fc0;
+    text-align: center;
+  }
+
   .projects-slider {
     width: 100%;
-    margin: 6% auto 12%;
+    margin: 0 auto 3rem;
+    overflow: visible;
+    perspective: none;
   }
+
+  .projects-track {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 0;
+    gap: 0.85rem;
+    animation: none;
+  }
+
+  /* hide the duplicated loop copy on mobile */
+  .projects-track .dup-copy {
+    display: none;
+  }
+
   .projects-track .project-card {
-    width: min(78vw, 300px);
+    width: 100%;
+    flex-shrink: 1;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 0.85rem;
+    align-items: center;
+    padding: 0.75rem;
+    margin: 0;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(139, 124, 246, 0.2);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    transform: none !important;
   }
-  .topProject {
-    width: 90%;
-    margin-left: 5%;
+
+  .projects-track .project-card #project_img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin: 0;
+  }
+
+  .project-card p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: #b9b4d6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .project-card p strong {
+    display: block;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 0.15rem;
+  }
+
+  .project-card .card-btns {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 0.6rem;
+    text-align: left;
+  }
+
+  .projects-track .code-btn,
+  .projects-track .demo-btn {
+    flex: 1;
+    width: auto;
+    margin: 0;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.83rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(139, 124, 246, 0.4);
+    background: rgba(104, 86, 224, 0.16);
+    color: #e8e4ff;
+    cursor: pointer;
+  }
+
+  .projects-track .demo-btn {
+    background: linear-gradient(135deg, #6856E0, #4a3aa8);
+    border: none;
+    color: #fff;
+  }
+
+  .swipe-hint {
+    display: none !important;
   }
 }
 

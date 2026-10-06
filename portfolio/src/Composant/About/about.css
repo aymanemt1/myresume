@@ -175,9 +175,11 @@ background-color: #2f237c;
   }
 
   .timeline-yr {
+    position: static;
     margin: 0;
     width: 3.6rem;
     height: 3.6rem;
+    line-height: 1.2;
     flex-shrink: 0;
     border-radius: 1rem;
     display: flex;

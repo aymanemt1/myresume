@@ -18,7 +18,7 @@ export const Footer = () => {
                 <div>
                     <h3 >{Footer.text}</h3>
                     <div className='icons'>
-                        <i className="fa-brands fa-instagram" id='insta-icon'></i>
+                        <a href=''><i className="fa-brands fa-instagram" id='insta-icon'></i></a>
                         <a href=''><i className="fa-brands fa-facebook" id='fb-icon'></i> </a>
                         <a href='https://linkedin.com/in/aymanemoutoute1'><i className="fa-brands fa-linkedin" id='linkdein-icon'></i> </a>
                         <a href='https://github.com/aymanemt1'><i className="fa-brands fa-github" id='github-icon'></i></a>

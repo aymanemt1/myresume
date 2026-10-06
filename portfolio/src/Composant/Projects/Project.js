@@ -128,8 +128,8 @@ export const Project = () => {
 
   const allCards = [...mainProjects, ...demoCards]
 
-  const renderCard = (c) => (
-    <div className="project-card" key={c.key}>
+  const renderCard = (c, copy) => (
+    <div className={`project-card${copy === 1 ? ' dup-copy' : ''}`} key={c.key}>
       <img src={c.img} id='project_img' alt={c.name || 'project'} />
       <p>{c.name ? <><strong>{c.name}</strong><br /></> : null}{c.desc}</p>
       <div className="card-btns">
@@ -148,7 +148,7 @@ export const Project = () => {
         <div className="projects-track">
           {[0, 1].map((copy) => (
             <React.Fragment key={copy}>
-              {allCards.map((c) => renderCard({ ...c, key: `${c.key}-${copy}` }))}
+              {allCards.map((c) => renderCard({ ...c, key: `${c.key}-${copy}` }, copy))}
             </React.Fragment>
           ))}
         </div>

@@ -33,45 +33,8 @@
     font-size: 1.75rem;
   }
 
-  /* ---------- Projects: swipeable snap carousel on mobile ---------- */
-  .projects-slider {
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    width: 100% !important;
-    margin: 1.5rem auto 3rem !important;
-    padding-bottom: 0.6rem;
-    cursor: grab;
-  }
-  .projects-slider::-webkit-scrollbar {
-    display: none;
-  }
-  .projects-track {
-    animation: none;
-    padding: 0.4rem 12vw;
-    gap: 1.1rem;
-  }
-  .projects-track:hover {
-    animation-play-state: running;
-  }
-  .projects-track .project-card {
-    scroll-snap-align: center;
-    width: min(76vw, 320px);
-  }
-  .projects-track .project-card #project_img {
-    height: 160px;
-  }
-  .swipe-hint {
-    display: block;
-    text-align: center;
-    color: var(--text-muted, #8f8aa8);
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    margin: -1.6rem 0 2.2rem;
-  }
-  /* Topbar has its own rebuilt mobile block in topbar.css — nothing needed here.
+  /* ---------- Projects: vertical one-card-per-line layout lives in Project.css ---------- */
+/* Topbar has its own rebuilt mobile block in topbar.css — nothing needed here.
      Just offset the hero so the fixed navbar never overlaps it. */
   .hero-section {
     padding-top: 104px !important;
