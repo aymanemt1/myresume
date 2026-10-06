@@ -8,23 +8,31 @@
 }
 
 .projects-slider{
-    overflow: visible;
+    overflow: hidden;
     width: 94%;
-    max-width: 1240px;
-    margin: 4% auto 8%;
+    margin: 4% auto 10%;
     font-family: 'Readex Pro', sans-serif;
 }
 
-/* Responsive grid — every project shown exactly once */
 .projects-track{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.6rem;
-    width: 100%;
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: projects-slide 45s linear infinite;
+}
+
+.projects-slider:hover .projects-track{
+    animation-play-state: paused;
+}
+
+@keyframes projects-slide{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(calc(-50% - 1rem)); }
 }
 
 .projects-track .project-card{
-    width: 100%;
+    width: 300px;
+    flex-shrink: 0;
     margin-bottom: 0;
 }
 
@@ -70,12 +78,6 @@
 .projects-track .code-btn:hover,
 .projects-track .demo-btn:hover{
     transform: translateY(-2px);
-}
-
-@media (max-width: 1100px) {
-    .projects-track{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
 .project-card{
@@ -202,10 +204,18 @@ cursor: pointer;
   }
 
   .projects-track {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
     padding: 0;
     gap: 0.85rem;
+    animation: none;
+  }
+
+  /* hide the duplicated loop copy on mobile */
+  .projects-track .dup-copy {
+    display: none;
   }
 
   .projects-track .project-card {

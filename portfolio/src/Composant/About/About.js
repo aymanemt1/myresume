@@ -20,7 +20,6 @@ export default function About() {
       <div id="about">
 
         <div id='AboutContent' >
-          <img src={require('../../Assets/avatar.png')} className="about-avatar" alt="Aymane Moutoute" data-aos="zoom-in" data-aos-duration="700" />
           <h2 id='head_content'>{About.head_content}</h2>
           <p className='para'>
             {About.content}

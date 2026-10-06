@@ -85,7 +85,11 @@ export const Content = () => {
     const link = document.createElement('a');
     link.href = pdfPath;
     link.download = 'CV-aymane-moutoute.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
   return (
     <>

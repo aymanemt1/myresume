@@ -16,6 +16,7 @@ import { Project } from "../Composant/Projects/Project";
 import { Preloader } from "../Composant/Preloader/Preloader";
 import { Marquee } from "../Composant/Marquee/Marquee";
 import { Stats } from "../Composant/Stats/Stats";
+import { Experience } from "../Composant/Experience/Experience";
 
 export const Home = () => {
   const [scrollWidth, setScrollWidth] = useState(0);
@@ -43,6 +44,10 @@ export const Home = () => {
 
       <div id="aboutParent">
         <About />
+      </div>
+
+      <div id="experienceParent">
+        <Experience />
       </div>
 
       <Stats />

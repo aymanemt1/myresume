@@ -22,6 +22,7 @@ export const TopBar = () => {
 
   const navLinks = [
     { id:1, to: 'aboutParent', text:`${Navbar.link1}` },
+    { id:5, to: 'experienceParent', text:`${Navbar.link5}` },
     { id:2, to: 'servicesParent', text:`${Navbar.link2}` },
     { id:3, to: 'projectsPranet', text:`${Navbar.link3}` },
     { id:4, to: 'ContactParent', text:`${Navbar.link4}` },

@@ -6,6 +6,7 @@ export const Translate = {
         link2:'Services',
         link3:'Projects',
         link4:'Contact',
+        link5:'Experience',
        
       },
       {
@@ -14,6 +15,7 @@ export const Translate = {
         link2:'Services',
         link3:'Projets',
         link4:'Contact',
+        link5:'Expérience',
       },
     ],
   };

@@ -294,23 +294,27 @@
   }
   .hero-cta {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row;
+    gap: 0.7rem;
     width: 100%;
-    max-width: 320px;
+    max-width: 420px;
     margin-top: 1.5rem;
     align-items: stretch;
   }
   .button {
     margin: 0;
-    width: 100%;
-    padding: 1.05rem;
-    letter-spacing: 1px;
-    font-size: 1.02rem;
+    flex: 1;
+    padding: 0.95rem 0.5rem;
+    letter-spacing: 0.5px;
+    font-size: 0.92rem;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
     box-sizing: border-box;
+    white-space: nowrap;
   }
   .button.ghost {
     background: rgba(104, 86, 224, 0.1);

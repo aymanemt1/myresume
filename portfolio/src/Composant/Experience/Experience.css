@@ -1,0 +1,156 @@
+#experienceParent {
+  padding: 4rem 1rem 5rem;
+  text-align: center;
+}
+
+.topExperience {
+  color: #a49fc0;
+  font-size: 1.05rem;
+  margin: 0.6rem auto 2.6rem;
+  max-width: 640px;
+  line-height: 1.6;
+}
+
+.exp-timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.exp-timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #6856E0, #22d3ee);
+  opacity: 0.7;
+}
+
+.exp-item {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.exp-item:last-child {
+  margin-bottom: 0;
+}
+
+.exp-dot {
+  position: absolute;
+  left: -2rem;
+  top: 1.4rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #b7aefc, #6856E0 70%);
+  border: 3px solid #0b1526;
+  box-shadow: 0 0 0 2px rgba(104, 86, 224, 0.55), 0 0 18px rgba(104, 86, 224, 0.6);
+  transform: translateX(-1px);
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(139, 124, 246, 0.22);
+  border-radius: 1.1rem;
+  padding: 1.4rem 1.5rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 124, 246, 0.5);
+  box-shadow: 0 18px 44px rgba(104, 86, 224, 0.22);
+}
+
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.exp-role {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.exp-company {
+  margin: 0.25rem 0 0;
+  color: #22d3ee;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.exp-period {
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #cfc9f5;
+  background: rgba(104, 86, 224, 0.18);
+  border: 1px solid rgba(139, 124, 246, 0.35);
+  padding: 0.35rem 0.8rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+}
+
+.exp-points {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #b9b4d4;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.exp-points li::marker {
+  color: #8b7cf6;
+}
+
+@media (max-width: 768px) {
+  #experienceParent {
+    padding: 3rem 1.1rem 3.5rem;
+  }
+  .topExperience {
+    font-size: 1.02rem;
+    margin-bottom: 2rem;
+  }
+  .exp-timeline {
+    padding-left: 1.6rem;
+  }
+  .exp-dot {
+    left: -1.6rem;
+    top: 1.3rem;
+    width: 15px;
+    height: 15px;
+  }
+  .exp-card {
+    padding: 1.1rem 1.15rem;
+    border-radius: 1rem;
+  }
+  .exp-head {
+    flex-direction: column;
+    gap: 0.55rem;
+    align-items: flex-start;
+  }
+  .exp-role {
+    font-size: 1.12rem;
+  }
+  .exp-company {
+    font-size: 0.92rem;
+  }
+  .exp-period {
+    font-size: 0.78rem;
+  }
+  .exp-points {
+    font-size: 0.9rem;
+  }
+}
