@@ -15,31 +15,26 @@ export const MySkills = () => {
     const filteredSkillsFront= Skills.filter((skill) => (
         skill.type === 'frontend'
       ));
-      
-      const frontendSkills = filteredSkillsFront.map((skill, index) => (
-        
-        <i key={index} className={skill.icon} id='iconSkills' title={skill.text}>
-        </i>
-        
-      ));
+
+      const renderSkill = (skill, index) => (
+        <span key={index} className="skill-item" title={skill.text}>
+          <i className={skill.icon} id='iconSkills'></i>
+          <small className="skill-name">{skill.text}</small>
+        </span>
+      );
+
+      const frontendSkills = filteredSkillsFront.map(renderSkill);
     const filteredSkillsBack= Skills.filter((skill) => (
         skill.type === 'backend'
       ));
-      
-      const backendSkills = filteredSkillsBack.map((skill, index) => (
-        <i key={index} className={skill.icon} id='iconSkills' title={skill.text}>
-        </i>
-      ));
-      
+
+      const backendSkills = filteredSkillsBack.map(renderSkill);
+
     const filteredSkillsOthers= Skills.filter((skill) => (
         skill.type === 'others'
       ));
-      
-      const OtherSkills = filteredSkillsOthers.map((skill, index) => (
-        <i key={index} className={skill.icon} id='iconSkills' title={skill.text}>
-        </i>
-        
-      ));
+
+      const OtherSkills = filteredSkillsOthers.map(renderSkill);
       
   return (
     <div id='skills'>

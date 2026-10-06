@@ -80,10 +80,10 @@ export const Content = () => {
 
 
   const handleDownload = () => {
-    const pdfPath = require('../../Assets/CV.docx');
+    const pdfPath = require('../../Assets/CV-aymane-moutoute.pdf');
     const link = document.createElement('a');
     link.href = pdfPath;
-    link.download = 'CV.docx';
+    link.download = 'CV-aymane-moutoute.pdf';
     link.click();
   };
   return (

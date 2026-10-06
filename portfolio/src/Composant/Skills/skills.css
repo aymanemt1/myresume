@@ -89,3 +89,37 @@
   
   
  
+/* Skill icon + label */
+.skill-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+  min-width: 74px;
+}
+
+.skill-name {
+  margin-top: 7px;
+  font-size: 0.72rem;
+  color: #b9b4d6;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+#iconSkills {
+  margin: 0;
+}
+
+.skill-item:hover .skill-name {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .skill-item {
+    min-width: 64px;
+    margin: 6px;
+  }
+  .skill-name {
+    font-size: 0.68rem;
+  }
+}
