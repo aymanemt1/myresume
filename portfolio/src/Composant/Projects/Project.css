@@ -136,3 +136,36 @@ cursor: pointer;
 }
     
    }
+
+/* ---------- 3D tilt ---------- */
+.projects-slider {
+  perspective: 1200px;
+}
+
+.project-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  border: 1px solid rgba(139, 124, 246, 0.16);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
+.project-card.tilt-active {
+  transition: transform 0.12s ease-out, box-shadow 0.25s ease;
+  box-shadow: 0 22px 48px rgba(104, 86, 224, 0.35);
+  border-color: rgba(34, 211, 238, 0.45);
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .projects-slider {
+    width: 100%;
+    margin: 6% auto 12%;
+  }
+  .projects-track .project-card {
+    width: min(78vw, 300px);
+  }
+  .topProject {
+    width: 90%;
+    margin-left: 5%;
+  }
+}

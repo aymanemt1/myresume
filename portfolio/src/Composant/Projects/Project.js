@@ -1,7 +1,45 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { LangueContext } from '../../Context/LangueContext'
 import { Translate } from './ProjectsTranslate'
 import './Project.css'
+
+/* 3D tilt on hover for project cards */
+const useTilt = (containerRef) => {
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const cards = container.querySelectorAll('.project-card');
+    const cleanups = [];
+
+    cards.forEach((card) => {
+      let raf = 0;
+      const onMove = (e) => {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - 0.5;
+          const py = (e.clientY - r.top) / r.height - 0.5;
+          card.classList.add('tilt-active');
+          card.style.transform =
+            `perspective(900px) rotateX(${(-py * 10).toFixed(2)}deg) rotateY(${(px * 12).toFixed(2)}deg) scale(1.04) translateZ(8px)`;
+        });
+      };
+      const onLeave = () => {
+        cancelAnimationFrame(raf);
+        card.classList.remove('tilt-active');
+        card.style.transform = '';
+      };
+      card.addEventListener('mousemove', onMove);
+      card.addEventListener('mouseleave', onLeave);
+      cleanups.push(() => {
+        card.removeEventListener('mousemove', onMove);
+        card.removeEventListener('mouseleave', onLeave);
+      });
+    });
+
+    return () => cleanups.forEach((fn) => fn());
+  }, []);
+};
 
 const DEMO_IMAGES = {
   restaurant: require('../../Assets/Projects/demo-restaurant.jpg'),
@@ -56,6 +94,8 @@ const DEMOS = [
 export const Project = () => {
 
   const { langue } = useContext(LangueContext)
+  const sliderRef = useRef(null);
+  useTilt(sliderRef);
 
   const Project = Translate.Project.find((lang) => (
     lang.id == langue
@@ -104,7 +144,7 @@ export const Project = () => {
       <h1><span style={{ borderBottom: '3px solid #6856E0' }}> {Project.title} </span></h1>
       <h4 className='topProject'>{Project.sous_title}</h4>
 
-      <div className="projects-slider" data-aos="zoom-out" data-aos-duration="700">
+      <div className="projects-slider" data-aos="zoom-out" data-aos-duration="700" ref={sliderRef}>
         <div className="projects-track">
           {[0, 1].map((copy) => (
             <React.Fragment key={copy}>

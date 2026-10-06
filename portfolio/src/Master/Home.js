@@ -1,6 +1,6 @@
-
 import React, { useState } from "react";
 import "./home.css";
+import "./responsive.css";
 
 import { Cursor } from "../Composant/Cursor/Cursor";
 import { TopBar } from "../Composant/Topbar/TopBar";
@@ -13,9 +13,13 @@ import { MySkills } from "../Composant/Skills/Skills";
 import ScrollButton from "../Composant/BtnTop/scrollToTop";
 import { Footer } from "../Composant/Footer/Footer";
 import { Project } from "../Composant/Projects/Project";
+import { Preloader } from "../Composant/Preloader/Preloader";
+import { Marquee } from "../Composant/Marquee/Marquee";
+import { Stats } from "../Composant/Stats/Stats";
 
 export const Home = () => {
   const [scrollWidth, setScrollWidth] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const handleScrollWidth = (width) => {
     setScrollWidth(width);
@@ -23,6 +27,8 @@ export const Home = () => {
 
   return (
     <div id="homeParent">
+      {loading && <Preloader onDone={() => setLoading(false)} />}
+
       <ScrollProgressBar
         onScrollWidthChange={handleScrollWidth}
       />
@@ -33,9 +39,13 @@ export const Home = () => {
 
       <Content />
 
+      <Marquee />
+
       <div id="aboutParent">
         <About />
       </div>
+
+      <Stats />
 
       <MySkills />
 
@@ -57,4 +67,3 @@ export const Home = () => {
     </div>
   );
 };
-
