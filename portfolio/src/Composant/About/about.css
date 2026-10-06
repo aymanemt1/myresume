@@ -216,3 +216,28 @@ background-color: #2f237c;
 
   
   
+
+/* ---------- Profile avatar ---------- */
+.about-avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0.4rem auto 1.3rem;
+  filter: drop-shadow(0 14px 34px rgba(104, 86, 224, 0.5));
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.about-avatar:hover {
+  transform: scale(1.05) rotate(2deg);
+  filter: drop-shadow(0 18px 44px rgba(34, 211, 238, 0.5));
+}
+
+@media (max-width: 768px) {
+  .about-avatar {
+    width: 112px;
+    height: 112px;
+    margin: 0.2rem auto 1rem;
+  }
+}
