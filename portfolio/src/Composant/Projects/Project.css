@@ -169,3 +169,8 @@ cursor: pointer;
     margin-left: 5%;
   }
 }
+
+/* Swipe hint: mobile only (shown via responsive.css) */
+.swipe-hint {
+  display: none;
+}

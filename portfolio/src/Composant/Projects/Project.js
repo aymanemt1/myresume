@@ -153,6 +153,7 @@ export const Project = () => {
           ))}
         </div>
       </div>
+      <p className="swipe-hint">&larr; {langue === 'fr' ? 'glissez' : 'swipe'} &rarr;</p>
     </>
   )
 }

@@ -103,7 +103,7 @@ background-color: #2f237c;
 
   
 @media (max-width: 576px) {
-    h1{
+    #aboutParent h1{
         margin-left: 217px;
     }
     #head_content{
