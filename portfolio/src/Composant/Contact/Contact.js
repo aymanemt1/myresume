@@ -41,12 +41,12 @@ export const Contact = () => {
             <form onSubmit={handleSubmit}>
         <div className="input-group">
             <div className='top-form'>
- <div><input  onChange={handleChange} required="" type="text" name="name" autoComplete="off" className="name" placeholder={Contact.name} /></div>
- <div ><input onChange={handleChange} required="" type="email" name="email" autoComplete="off" className="email"  placeholder={Contact.email} /></div>
+ <div className="field"><input  onChange={handleChange} required="" type="text" name="name" autoComplete="off" className="name" placeholder=" " /><label>{Contact.name}</label></div>
+ <div className="field"><input onChange={handleChange} required="" type="email" name="email" autoComplete="off" className="email"  placeholder=" " /><label>{Contact.email}</label></div>
  </div>
 
- <div style={{marginTop:"30px"}}>
- <textarea onChange={handleChange} required="" type="text" name="message" autoComplete="off" className="message"  placeholder={Contact.message} />
+ <div style={{marginTop:"30px"}} className="field">
+ <textarea onChange={handleChange} required="" name="message" autoComplete="off" className="message"  placeholder=" " /><label>{Contact.message}</label>
  </div>
  <div>
  <button type='submit' className="buttonSend" > 

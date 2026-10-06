@@ -52,6 +52,33 @@
     outline: none;
     border: 1px solid #6856E0;
    }
+
+   /* ---------- Floating labels ---------- */
+   .field {
+     position: relative;
+   }
+   .field > label {
+     position: absolute;
+     left: 1rem;
+     top: 1rem;
+     color: #6f6a8a;
+     font-size: 1rem;
+     pointer-events: none;
+     transition: top 0.18s ease, font-size 0.18s ease, color 0.18s ease;
+     padding: 0 0.35rem;
+     line-height: 1.2;
+   }
+   .field input:focus + label,
+   .field input:not(:placeholder-shown) + label,
+   .field textarea:focus + label,
+   .field textarea:not(:placeholder-shown) + label {
+     top: -0.62rem;
+     font-size: 0.72rem;
+     letter-spacing: 0.6px;
+     color: #b7aefc;
+     background: #0a121d;
+     border-radius: 0.3rem;
+   }
    
    .buttonSend {
     position: relative;

@@ -205,6 +205,37 @@
   50% { opacity: 0.45; transform: scale(0.75); }
 }
 
+/* Mobile-only hero name (hidden on desktop) */
+.hero-m-name {
+  display: none;
+}
+
+.hero-cta {
+  display: contents;
+}
+
+/* Ghost CTA (desktop: sits next to the main button) */
+.hero-cta .button.ghost {
+  margin-left: 1rem;
+  background: rgba(104, 86, 224, 0.1);
+  border: 1px solid rgba(139, 124, 246, 0.45);
+  box-shadow: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-cta .button.ghost::before {
+  display: none;
+}
+
+.hero-cta .button.ghost:hover {
+  background: rgba(104, 86, 224, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(104, 86, 224, 0.35);
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 992px) {
@@ -221,7 +252,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 90px 20px 64px;
+    padding: 104px 20px 64px;
     min-height: auto;
   }
   .hero-inner {
@@ -237,38 +268,62 @@
     flex-direction: column;
     align-items: center;
   }
-  #leftContent h1 {
-    font-size: clamp(2.3rem, 10.5vw, 3.4rem);
-    text-align: center;
+
+  /* New mobile hero idea: giant name instead of the 3-line titles */
+  #leftContent .text,
+  #leftContent .myname {
+    display: none;
   }
-  .text {
-    margin: 12px 0;
-    border-bottom: none;
-    align-items: center;
-  }
-  #text1, #text3 {
-    margin-left: 0;
-    width: 100%;
-  }
-  .myname {
-    position: static;
-    transform: none;
-    margin: 0.7rem 0 0;
-    font-size: 1.35rem;
-    text-align: center;
+  .hero-m-name {
+    display: block;
+    font-size: clamp(2.7rem, 14vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0.4rem 0 0;
+    background: linear-gradient(160deg, #ffffff 20%, #b7aefc 60%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 6px 26px rgba(104, 86, 224, 0.35));
   }
   .typed-roles {
     font-size: 0.98rem;
     margin: 1.1rem 0 0;
     text-align: center;
   }
-  .button {
-    margin: 1.5rem 0 0;
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
     width: 100%;
     max-width: 320px;
+    margin-top: 1.5rem;
+    align-items: stretch;
+  }
+  .button {
+    margin: 0;
+    width: 100%;
     padding: 1.05rem;
     letter-spacing: 1px;
     font-size: 1.02rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .button.ghost {
+    background: rgba(104, 86, 224, 0.1);
+    border: 1px solid rgba(139, 124, 246, 0.45);
+    box-shadow: none;
+    cursor: pointer;
+    margin-left: 0;
+  }
+  .button.ghost::before {
+    display: none;
+  }
+  .button.ghost:active {
+    background: rgba(104, 86, 224, 0.25);
   }
   #rightContent {
     width: 100%;
