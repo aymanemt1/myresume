@@ -80,17 +80,6 @@ export const Content = () => {
   }, [])
 
 
-  const handleDownload = () => {
-    const pdfPath = require('../../Assets/CV-aymane-moutoute.pdf');
-    const link = document.createElement('a');
-    link.href = pdfPath;
-    link.download = 'CV-aymane-moutoute.pdf';
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
   return (
     <>
       <div className="content hero-section">
@@ -113,9 +102,15 @@ export const Content = () => {
               <span className="typed-caret" />
             </p>
             <div className="hero-cta">
-              <button className="button" onClick={handleDownload}>
+              <a
+                className="button"
+                href={require('../../Assets/CV-aymane-moutoute.pdf')}
+                download="CV-aymane-moutoute.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {Content.button_txt} <i className="fa-solid fa-download" id='download-icon'></i>
-              </button>
+              </a>
               <Link to="ContactParent" smooth={true} offset={-70} duration={600} className="button ghost">
                 {langue === 'fr' ? 'Discutons' : "Let's Talk"} <i className="fa-solid fa-arrow-right" id='download-icon'></i>
               </Link>

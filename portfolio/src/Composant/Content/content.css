@@ -136,6 +136,10 @@
   border: 1px solid rgba(139, 124, 246, 0.5);
   margin-top: 1.6rem;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
   box-shadow: 0 8px 28px rgba(104, 86, 224, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   z-index: 1;
