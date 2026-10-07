@@ -107,7 +107,7 @@ export const Project = () => {
       img: require('../../Assets/Projects/saaskit.jpg'),
       desc: Project.description3,
       code: 'https://github.com/aymanemt1/saas-starter-kit',
-      demo: null, // TODO: set Vercel URL after deployment
+      demo: 'https://saas-starter-em4ri1oib-aymanemt1.vercel.app',
     },
     {
       key: 'mt-fashion',
