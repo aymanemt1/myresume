@@ -103,6 +103,13 @@ export const Project = () => {
 
   const mainProjects = [
     {
+      key: 'saaskit',
+      img: require('../../Assets/Projects/saaskit.jpg'),
+      desc: Project.description3,
+      code: 'https://github.com/aymanemt1/saas-starter-kit',
+      demo: null, // TODO: set Vercel URL after deployment
+    },
+    {
       key: 'mt-fashion',
       img: require('../../Assets/Projects/project1.jpg'),
       desc: Project.description1,
@@ -146,7 +153,7 @@ export const Project = () => {
       <p>{c.name ? <><strong>{c.name}</strong><br /></> : null}{c.desc}</p>
       <div className="card-btns">
         {c.code && <a href={c.code} target="_blank" rel="noreferrer"><button className='code-btn'>View Code</button></a>}
-        <a href={c.demo} target="_blank" rel="noreferrer"><button className='demo-btn'>View Demo</button></a>
+        {c.demo && <a href={c.demo} target="_blank" rel="noreferrer"><button className='demo-btn'>View Demo</button></a>}
       </div>
     </div>
   )
